@@ -21,4 +21,6 @@ print(greeting)
 
 # STDIO
 
-my_name = input("What's your name?")
+my_name = input("What's your name?\n")
+greeting2 = hello + my_name
+print(greeting2)
