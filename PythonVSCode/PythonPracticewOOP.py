@@ -74,8 +74,6 @@ def main():
     newBullBilly = Bull()
     newCalf = Calf('playing', 'calm')
     newCalf.play('not playing') #Setter-getter
-    cowAge = '48'
-    cowAge2 = int(cowAge)  # the int() is actually the integer constructor, because everything in python is an object
     print_Characteristics(newCow)
     print_Characteristics(newBull)
     print_Characteristics(cow2)

@@ -1,0 +1,6 @@
+01 Hello
+02 My name is Gimli
+03 I am a dwarf
+04 I used to have family in Moria
+05 I am friends with an elf
+06 I have met orcs and a Balrog
