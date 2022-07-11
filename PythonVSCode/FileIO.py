@@ -4,6 +4,7 @@ def main():
     file = open('BunchOfLines.txt', 'r+')   #no need to add all the path, since they are in the same folder. The default mode is read-only. a is append, w is write (it erases everything in the file to write it again)
     for line in file:
         print(line.rstrip())
+    file.close()
 
 
 if __name__ == '__main__' : main() 

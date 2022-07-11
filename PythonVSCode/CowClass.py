@@ -67,7 +67,7 @@ def print_Characteristics(animal):
 
  
 def main():
-    print('we\'ll take a look at our cattle!'.upper())
+    print('we\'ll take a look at our cattle!'.upper())   #String functions 
     newCow = Cow('Lola', 'moo', 'taking a stroll', 'Holstein Friesian')
     cow2 = Cow('Doja Cat', 'moo', 'furiously running', 'British White')
     newBull = Bull(eat= 'grass', rest= '5 hours')
@@ -83,7 +83,7 @@ def main():
     print_Characteristics(newCalf)
     print(newCalf)
 
-
+any()
 
 
 if __name__ == '__main__' : main()    #This will return the name of the current module if someone were to import this file
