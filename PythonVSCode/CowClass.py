@@ -1,6 +1,5 @@
 #!/usr/bin/env python 3
 
-import PySimpleGUI as sg
 import platform
 
 
@@ -53,17 +52,18 @@ class Calf:
     def __str__(self):  #method to return the characteristics in a print function instead of creating a new function, such as print_Characteristics()
         return 'The calf is {} and {}'.format(self.play(), self.cry())  #we use the methods not the variables we marked as "private/do not touch"
 
-
+class BabyCow(Cow):
+    pass
 
 def print_Characteristics(animal):
-    if not isinstance(animal, (Cow, Bull, Calf)):  #checking if the object is instance of classes Cow, Calf and Bull defined here. Using a tuple as an arg 
-        raise TypeError('Neither a cow nor a bull is here!')
-    if isinstance(animal, Cow): 
+    if not isinstance(animal, (Cow, Bull, Calf, BabyCow)):  #checking if the object is instance of classes Cow, Calf and Bull defined here. Using a tuple as an arg 
+        raise TypeError('Neither a cow, a calf, a baby calf nor a bull is here!')
+    if isinstance(animal, (Cow, BabyCow)): 
         print('The {} is named {} and she says {}. She currently is {}'. format(animal.cowType(), animal.name(), animal.sound(), animal.walk())) 
     if isinstance(animal, Bull):
         print('The bull is eating {} and has rested for {}'. format(animal.eat(), animal.rest()))
     if isinstance(animal, Calf):
-        print('The baby calf is {} and {}'. format(animal.cry(), animal.play()))
+        print('The calf is {} and {}'. format(animal.cry(), animal.play()))
 
  
 def main():
@@ -76,14 +76,14 @@ def main():
     newCalf.play('not playing') #Setter-getter
     cowAge = '48'
     cowAge2 = int(cowAge)  # the int() is actually the integer constructor, because everything in python is an object
+    newBabyCow = BabyCow('Lolita', 'moooo', 'running', 'British White')
     print_Characteristics(newCow)
     print_Characteristics(newBull)
     print_Characteristics(cow2)
     print_Characteristics(newBullBilly)
     print_Characteristics(newCalf)
+    print_Characteristics(newBabyCow)
     print(newCalf)
-
-any()
 
 
 if __name__ == '__main__' : main()    #This will return the name of the current module if someone were to import this file

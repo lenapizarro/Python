@@ -3,7 +3,7 @@
 
 from cgi import test
 from decimal import *
-from pickle import TRUE #if we didn't import the decimal library, it would not allow us to be accurate with our results 
+from pickle import TRUE                                        #if we didn't import the decimal library, it would not allow us to be accurate with our results 
 
 a = Decimal('0.10')
 b = Decimal('0.30')
@@ -19,7 +19,6 @@ var1 = None
 print(type(var1))
 
 #lists, tuples and dictionaries
-
 #list 
 
 listA = [1, True, 26, 30, 'Cow']
@@ -31,7 +30,6 @@ for i in listA:
 tupleB = (1,2,3,4, True, 'Panda')
 for i in tupleB:
     print('i is {}'.format(i))
-
 collectionVar = 'Panda'
 if collectionVar in tupleB:
     print('It is a member of the collection')
